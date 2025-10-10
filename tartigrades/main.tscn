@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bmxsitsvqynyd" path="res://TardigradeGame.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cwts06dwryq4" path="res://food.tscn" id="2_1bvp3"]
-[ext_resource type="Script" uid="uid://dbftnb1ytump1" path="res://TardigradeGameController.gd" id="3_lquwl"]
+[ext_resource type="Script" uid="uid://dbftnb1ytump1" path="res://playerController.gd" id="3_lquwl"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_h2yge")
