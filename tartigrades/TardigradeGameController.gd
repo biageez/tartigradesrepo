@@ -1,9 +1,10 @@
 extends Node2D
 const TILESIZE = 16
-var moveDelay = .15
+var moveDelay = .12
 var moveTimer = 0
 var direction = Vector2(1,0)
 var tardigradeBody = []
+var new_direction = direction
 
 func _ready() -> void: 
 	for i in range(3):
@@ -12,19 +13,25 @@ func _ready() -> void:
 	pass
 		
 func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("ui_up"):
+		if direction != Vector2(0, 1):
+			new_direction = Vector2(0, -1)
+	elif Input.is_action_just_pressed("ui_down"): 
+		if direction != Vector2(0, -1):
+			new_direction = Vector2(0, 1)
+	elif Input.is_action_just_pressed("ui_left"):  
+		if direction != Vector2(1, 0):
+			new_direction = Vector2(-1, 0)
+	elif Input.is_action_just_pressed("ui_right"):
+		if direction != Vector2(-1, 0):
+			new_direction = Vector2(1, 0)
+	
+	
 	moveTimer += delta
 	if moveTimer >= moveDelay:
 		moveTimer = 0
+		direction = new_direction
 		moveTardigrade()
-		
-	if Input.is_action_just_pressed("ui_up") and direction != Vector2(0, 1):
-		direction = Vector2(0, -1)
-	if Input.is_action_just_pressed("ui_down") and direction != Vector2(0, -1):
-		direction = Vector2(0, 1)
-	if Input.is_action_just_pressed("ui_left") and direction != Vector2(1, 0):
-		direction = Vector2(-1, 0)
-	if Input.is_action_just_pressed("ui_right") and direction != Vector2(-1, 0):
-		direction = Vector2(1, 0)
 
 func growTardigrade():
 	var middle = tardigradeBody[1]

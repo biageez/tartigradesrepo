@@ -7,5 +7,6 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	body.get_parent().growTardigrade()
+	get_parent().SpawnPlantCell()
 	queue_free()
 	pass # Replace with function body.
