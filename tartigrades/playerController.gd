@@ -37,9 +37,11 @@ func growTardigrade():
 	var middle = tardigradeBody[1]
 	var sprite = middle.get_node_or_null("Sprite2D")
 	if sprite:
-		sprite.scale *= Vector2(1.2, 1.2) 
+		sprite.scale *= Vector2(1.01, 1.01) 
+		#sprite.texture = preload("images of growing belly")
 		
-	moveDelay *= .95
+	get_parent().UpdateFuel()	
+	moveDelay *= .98
 
 func moveTardigrade():
 	var nextPosition = tardigradeBody[0].position + direction * TILESIZE
@@ -60,10 +62,13 @@ func createPart(position: Vector2, index: int):
 	match index: 
 		0: 
 			sprite.texture = preload("res://icon.svg")
+			sprite.z_index = 2
 		1: 
 			sprite.texture = preload("res://middle.svg.png")
+			sprite.z_index = 0
 		2: 
 			sprite.texture = preload("res://tail.svg")
+			sprite.z_index = 2
 		_: 
 			sprite.texture = preload("res://middle.svg")
 			

@@ -12,3 +12,8 @@ Food = ExtResource("2_1bvp3")
 script = ExtResource("3_lquwl")
 
 [node name="Food" parent="." instance=ExtResource("2_1bvp3")]
+
+[node name="Fuel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Fuel: "

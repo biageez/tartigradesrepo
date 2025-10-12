@@ -4,18 +4,19 @@
 [ext_resource type="Script" uid="uid://d004yvay4uvgc" path="res://food.gd" id="1_pohk7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pohk7"]
-size = Vector2(24, 24)
+size = Vector2(71.641785, 71.641785)
 
 [node name="Food" type="Area2D"]
+scale = Vector2(0.335, 0.335)
 script = ExtResource("1_pohk7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(12, 12)
-scale = Vector2(0.1875, 0.1875)
+position = Vector2(35.820892, 35.820892)
+scale = Vector2(0.55970144, 0.55970144)
 texture = ExtResource("1_8txok")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(12, 12)
+position = Vector2(35.820892, 35.820892)
 shape = SubResource("RectangleShape2D_pohk7")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
