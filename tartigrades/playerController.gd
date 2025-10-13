@@ -75,10 +75,10 @@ func createPart(position: Vector2, index: int):
 			sprite.z_index = 2
 		1: 
 			sprite.texture = preload("res://middle.svg.png")
-			sprite.z_index = 0
+			sprite.z_index = 1
 		2: 
 			sprite.texture = preload("res://tail.svg")
-			sprite.z_index = 2
+			sprite.z_index = 0
 		_: 
 			sprite.texture = preload("res://middle.svg")
 			
