@@ -1,4 +1,5 @@
 extends Node2D
+
 const TILESIZE = 16
 var moveDelay = .12
 var moveTimer = 0
@@ -26,12 +27,12 @@ func _process(delta: float) -> void:
 		if direction != Vector2(-1, 0):
 			new_direction = Vector2(1, 0)
 	
-	
 	moveTimer += delta
 	if moveTimer >= moveDelay:
 		moveTimer = 0
 		direction = new_direction
 		moveTardigrade()
+	
 
 func growTardigrade():
 	var middle = tardigradeBody[1]
