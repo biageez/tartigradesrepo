@@ -16,7 +16,7 @@ func spawnPlantCellDeferred():
 
 func UpdateFuel(): 
 	Fuel += 10
-	$Fuel.text = "Fuel: " + str(round(Fuel))
+	$Fuel.text = "Fuel: " + str(int(Fuel))
 	
 func ConsumeFuel(delta: float) -> void: 
 	if Fuel <= 0: 
@@ -26,4 +26,4 @@ func ConsumeFuel(delta: float) -> void:
 	var decay_rate = fuel_decay_rate/100 #convert to percentage?
 	var fuel_used = Fuel * decay_rate * delta
 	Fuel -= fuel_used 
-	$Fuel.text = "Fuel: " + str(round(Fuel))
+	$Fuel.text = "Fuel: " + str(int(Fuel))

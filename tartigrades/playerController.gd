@@ -1,7 +1,11 @@
 extends Node2D
 
 const TILESIZE = 16
-var moveDelay = .12
+var baseMoveDelay = .12
+@export var minMoveDelay = .05
+@export var maxMoveDelay = .12
+@export var fuelSpeedCap = 500
+
 var moveTimer = 0
 var direction = Vector2(1,0)
 var tardigradeBody = []
@@ -14,6 +18,11 @@ func _ready() -> void:
 	pass
 		
 func _process(delta: float) -> void:
+	var fuel = get_parent().Fuel
+	var fuel_ratio = clamp(get_parent().Fuel/fuelSpeedCap, 0, 1)
+	var moveDelay = lerp(maxMoveDelay, minMoveDelay, fuel_ratio)
+	
+	
 	if Input.is_action_just_pressed("ui_up"):
 		if direction != Vector2(0, 1):
 			new_direction = Vector2(0, -1)
@@ -42,7 +51,7 @@ func growTardigrade():
 		#sprite.texture = preload("images of growing belly")
 		
 	get_parent().UpdateFuel()	
-	moveDelay *= .98
+	#moveDelay *= .98
 
 func moveTardigrade():
 	var nextPosition = tardigradeBody[0].position + direction * TILESIZE
