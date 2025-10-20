@@ -1,4 +1,4 @@
-extends Node2D
+extends CharacterBody2D
 
 const TILESIZE = 16
 var baseMoveDelay = .12
@@ -42,8 +42,11 @@ func _process(delta: float) -> void:
 		direction = new_direction
 		moveTardigrade()
 	
+func growTardigrade(): 
+	call_deferred("growTardigradeDeferred")
 
-func growTardigrade():
+
+func growTardigradeDeferred():
 	var middle = tardigradeBody[1]
 	var sprite = middle.get_node_or_null("Sprite2D")
 	if sprite:

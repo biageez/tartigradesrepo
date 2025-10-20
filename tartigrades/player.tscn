@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7au6m2cjit38"]
+
+[ext_resource type="Script" uid="uid://dbftnb1ytump1" path="res://playerController.gd" id="1_4flbx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4flbx"]
+
+[node name="Tardigrade" type="CharacterBody2D"]
+script = ExtResource("1_4flbx")
+minMoveDelay = 0.01
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_4flbx")
