@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://ck1msl4y2cj5n"]
+
+[ext_resource type="Script" uid="uid://bmxsitsvqynyd" path="res://TardigradeGame.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cwts06dwryq4" path="res://food.tscn" id="2_1bvp3"]
+[ext_resource type="Script" uid="uid://dbftnb1ytump1" path="res://playerController.gd" id="3_lquwl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_h2yge")
+Food = ExtResource("2_1bvp3")
+
+[node name="CollisionShape2DPlantCell" type="CollisionShape2D" parent="."]
+position = Vector2(16, 48)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="Tardigrade" type="Node2D" parent="."]
+script = ExtResource("3_lquwl")
+minMoveDelay = 0.01
+
+[node name="Food" parent="." instance=ExtResource("2_1bvp3")]
+
+[node name="Fuel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Fuel: "
