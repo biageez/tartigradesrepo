@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://6c58siy3mlxr"]
+[gd_scene load_steps=4 format=3 uid="uid://6c58siy3mlxr"]
 
+[ext_resource type="Script" uid="uid://d4kxbxj57my1j" path="res://save_loader/Prototype_Save_Loader.gd" id="1_6m7hl"]
 [ext_resource type="PackedScene" uid="uid://bh0i7wb1r0n1j" path="res://player/Prototype_Player.tscn" id="1_yb3aq"]
 [ext_resource type="PackedScene" uid="uid://h6n4e6iuotm1" path="res://environment/background.tscn" id="2_rgw62"]
 
 [node name="Prototype_Main" type="Node2D"]
-
-[node name="Background" parent="." instance=ExtResource("2_rgw62")]
+script = ExtResource("1_6m7hl")
 
 [node name="Player" parent="." instance=ExtResource("1_yb3aq")]
-position = Vector2(462, 415)
+position = Vector2(1043, 1143)
+
+[node name="Background" parent="." instance=ExtResource("2_rgw62")]
+z_index = -5
