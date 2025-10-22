@@ -21,13 +21,13 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 	if Input.is_action_pressed("ui_down"):
-		$AnimationPlayer.play("player_walk_down")
+		$AnimatedSprite2D.play("player_walk_down")
 	
 	if Input.is_action_pressed("ui_up"):
-		$AnimationPlayer.play("player_walk_up")
+		$AnimatedSprite2D.play("player_walk_up")
 		
 	if Input.is_action_pressed("ui_left"):
-		$AnimationPlayer.play("player_walk_left")
+		$AnimatedSprite2D.play("player_walk_left")
 		
 	if Input.is_action_pressed("ui_right"):
-		$AnimationPlayer.play("player_walk_right")
+		$AnimatedSprite2D.play("player_walk_right")
