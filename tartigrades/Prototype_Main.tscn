@@ -4,13 +4,14 @@
 [ext_resource type="PackedScene" uid="uid://bh0i7wb1r0n1j" path="res://player/Prototype_Player.tscn" id="1_yb3aq"]
 [ext_resource type="PackedScene" uid="uid://h6n4e6iuotm1" path="res://environment/background.tscn" id="2_rgw62"]
 [ext_resource type="Script" uid="uid://dcygtub7imikp" path="res://spawner.gd" id="4_nx6b5"]
-[ext_resource type="PackedScene" uid="uid://jdcua6oehj1v" path="res://collectible.tscn" id="5_ty3kh"]
+[ext_resource type="PackedScene" uid="uid://jdcua6oehj1v" path="res://collectibles/collectible.tscn" id="5_ty3kh"]
 
 [node name="Prototype_Main" type="Node2D"]
 script = ExtResource("1_6m7hl")
 
 [node name="Player" parent="." instance=ExtResource("1_yb3aq")]
 position = Vector2(1043, 1143)
+speed = 500.0
 
 [node name="Background" parent="." instance=ExtResource("2_rgw62")]
 z_index = -5
