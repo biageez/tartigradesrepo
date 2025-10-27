@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://q1hy8bkdlq0o" path="res://player/Prototype_Player.gd" id="1_3ako4"]
 [ext_resource type="Texture2D" uid="uid://cbyb3yvm53few" path="res://player/Prototype_Sprite_Sheet.png" id="2_3ako4"]
-[ext_resource type="Texture2D" uid="uid://xxigep2cwx2c" path="res://player/Untitled_Artwork 21.png" id="2_n28gq"]
-[ext_resource type="Texture2D" uid="uid://djoxiy1od8du0" path="res://player/Untitled_Artwork 17.png" id="2_rll4u"]
-[ext_resource type="Texture2D" uid="uid://bd7ajs4jchmq5" path="res://player/Untitled_Artwork 23.png" id="3_1fjw4"]
-[ext_resource type="Texture2D" uid="uid://dj41epjd0xtvw" path="res://player/Untitled_Artwork 19.png" id="4_pp8h6"]
+[ext_resource type="Texture2D" uid="uid://bxmiidygua4qt" path="res://player/Player_Noggin.png" id="2_n28gq"]
+[ext_resource type="Texture2D" uid="uid://bxmiidygua4qt" path="res://player/Player_Noggin.png" id="2_rll4u"]
+[ext_resource type="Texture2D" uid="uid://bxmiidygua4qt" path="res://player/Player_Noggin.png" id="3_1fjw4"]
+[ext_resource type="Texture2D" uid="uid://bxmiidygua4qt" path="res://player/Player_Noggin.png" id="4_pp8h6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ako4"]
 radius = 62.0

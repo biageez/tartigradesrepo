@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://d4kxbxj57my1j" path="res://save_loader/Prototype_Save_Loader.gd" id="1_6m7hl"]
 [ext_resource type="PackedScene" uid="uid://bh0i7wb1r0n1j" path="res://player/Prototype_Player.tscn" id="1_yb3aq"]
 [ext_resource type="PackedScene" uid="uid://h6n4e6iuotm1" path="res://environment/background.tscn" id="2_rgw62"]
-[ext_resource type="Script" uid="uid://dcygtub7imikp" path="res://spawner.gd" id="4_nx6b5"]
-[ext_resource type="PackedScene" uid="uid://jdcua6oehj1v" path="res://collectible.tscn" id="5_ty3kh"]
+[ext_resource type="Script" path="res://spawner.gd" id="4_nx6b5"]
+
+[sub_resource type="Resource" id="Resource_nx6b5"]
+metadata/__load_path__ = "res://collectibles/collectible.tscn"
 
 [node name="Prototype_Main" type="Node2D"]
 script = ExtResource("1_6m7hl")
@@ -18,7 +20,7 @@ z_index = -5
 [node name="Spawner" type="Area2D" parent="." node_paths=PackedStringArray("player")]
 script = ExtResource("4_nx6b5")
 player = NodePath("../Player")
-collectible_scene = ExtResource("5_ty3kh")
+collectible_scene = SubResource("Resource_nx6b5")
 spawn_every = 0.1
 min_radius = 0.0
 max_radius = 5000.0
