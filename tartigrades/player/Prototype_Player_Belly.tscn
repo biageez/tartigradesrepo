@@ -1,6 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://ct0oh2t45rr04"]
 
 [ext_resource type="Texture2D" uid="uid://cnjfqc70gwsrs" path="res://player/Player_Belly.png" id="1_0l1s6"]
+[ext_resource type="Script" uid="uid://d4mfvlfppgexg" path="res://player/prototype_belly_follower.gd" id="1_fohbs"]
 
 [sub_resource type="Animation" id="Animation_fohbs"]
 resource_name = "Belly_Walk"
@@ -25,60 +26,34 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D2:frame_coords")
+tracks/0/path = NodePath("Sprite2D:flip_h")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Vector2i(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_c41wm"]
-resource_name = "Belly_Walk_3"
-length = 2.5
-loop_mode = 1
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D2:frame_coords")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.8, 1.2, 1.5, 1.8041451, 2.0073957, 2.2968423),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(1, 0), Vector2i(1, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(1, 0)]
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_760lv"]
 _data = {
 &"Belly_Walk": SubResource("Animation_fohbs"),
-&"Belly_Walk_3": SubResource("Animation_c41wm"),
 &"RESET": SubResource("Animation_vhru4")
 }
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_fohbs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.90588236)
 position = Vector2(0, 200)
+scale = Vector2(-1, 1)
 texture = ExtResource("1_0l1s6")
+flip_h = true
 hframes = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_760lv")
-}
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(0, 921)
-scale = Vector2(-1, 1)
-texture = ExtResource("1_0l1s6")
-hframes = 3
-
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_760lv")
 }

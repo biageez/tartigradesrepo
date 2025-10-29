@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm6q7ljfib1wj"]
+
+[sub_resource type="GDScript" id="GDScript_6i8mu"]
+script/source = "extends Node2D
+
+@export var target: Node2D
+@export var follow_speed:= 2.0
+@export var offset: Vector2 = Vector2.ZERO
+@export var offset_distance:= 100
+
+func _process(delta: float) -> void:
+	if target:
+		# Direction from target to follower
+		var dir = (global_position - target.global_position).normalized()
+	
+		# Target position behind the target
+		var target_pos = target.global_position + dir * offset_distance
+	
+		# Smoothly move toward target position
+		global_position = global_position.lerp(target_pos, follow_speed * delta)
+	
+		# Rotate to face the target
+		look_at(target.global_position)
+		rotation += deg_to_rad(90)  # adjust sprite orientation
+"
+
+[node name="BellyFollower" type="Node2D"]
+script = SubResource("GDScript_6i8mu")

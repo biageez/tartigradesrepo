@@ -1,8 +1,7 @@
-[gd_scene load_steps=34 format=3 uid="uid://bh0i7wb1r0n1j"]
+[gd_scene load_steps=33 format=3 uid="uid://bh0i7wb1r0n1j"]
 
 [ext_resource type="Script" uid="uid://q1hy8bkdlq0o" path="res://player/Prototype_Player.gd" id="1_3ako4"]
 [ext_resource type="Texture2D" uid="uid://cbcmqqnfpw1pa" path="res://player/Untitled_Artwork 17.png" id="2_3ako4"]
-[ext_resource type="PackedScene" uid="uid://ct0oh2t45rr04" path="res://player/Prototype_Player_Belly.tscn" id="3_rll4u"]
 
 [sub_resource type="Animation" id="Animation_rll4u"]
 length = 0.001
@@ -492,10 +491,6 @@ animation_tree = NodePath("AnimationTree")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_3ako4")
 hframes = 5
-
-[node name="Node2D" parent="Sprite2D" instance=ExtResource("3_rll4u")]
-z_index = -1
-position = Vector2(44, 526)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Sprite2D")
