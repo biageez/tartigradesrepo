@@ -11,7 +11,7 @@ func _ready():
 	playback = animation_tree["parameters/playback"]
 
 func _physics_process(delta: float) -> void:
-	input = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	input = Input.get_vector("ui_right", "ui_left", "ui_down", "ui_up")
 	velocity = input * speed
 	move_and_slide()
 	select_animation()

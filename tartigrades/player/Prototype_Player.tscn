@@ -1,7 +1,8 @@
-[gd_scene load_steps=33 format=3 uid="uid://bh0i7wb1r0n1j"]
+[gd_scene load_steps=34 format=3 uid="uid://bh0i7wb1r0n1j"]
 
 [ext_resource type="Script" uid="uid://q1hy8bkdlq0o" path="res://player/Prototype_Player.gd" id="1_3ako4"]
 [ext_resource type="Texture2D" uid="uid://cbcmqqnfpw1pa" path="res://player/Untitled_Artwork 17.png" id="2_3ako4"]
+[ext_resource type="PackedScene" uid="uid://ct0oh2t45rr04" path="res://player/Prototype_Player_Belly.tscn" id="3_rll4u"]
 
 [sub_resource type="Animation" id="Animation_rll4u"]
 length = 0.001
@@ -168,132 +169,6 @@ tracks/2/keys = {
 "values": [Vector2(130, 300)]
 }
 
-[sub_resource type="Animation" id="Animation_hekqa"]
-resource_name = "player_walk_up"
-length = 3.0
-loop_mode = 1
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame_coords:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 0.9943542, 1.1960777, 1.4018763, 1.5989693, 1.7989694, 1.9989693, 2.1989694, 2.3989694, 2.5933235, 2.795047, 3.0008457),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 3, 2, 1, 0, 1, 2, 3, 4, 3, 2, 1]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.9, 1.9, 3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 0.08726646259971647, -0.08726646259971647, 0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_n28gq"]
-resource_name = "player_walk_up_right"
-length = 3.0
-loop_mode = 1
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame_coords:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 0.9943542, 1.1960777, 1.4018763, 1.5989693, 1.7989694, 1.9989693, 2.1989694, 2.3989694, 2.5933235, 2.795047, 3.0008457),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 3, 2, 1, 0, 1, 2, 3, 4, 3, 2, 1]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.6, 1.5, 2.4, 3),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.7853981633974483, 0.6981317007977318, 0.8726646259971648, 0.6108652381980153, 0.7853981633974483]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(130, 50)]
-}
-
-[sub_resource type="Animation" id="Animation_1fjw4"]
-resource_name = "player_walk_up_left"
-length = 3.0
-loop_mode = 1
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame_coords:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 0.9943542, 1.1960777, 1.4018763, 1.5989693, 1.7989694, 1.9989693, 2.1989694, 2.3989694, 2.5933235, 2.795047, 3.0008457),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 3, 2, 1, 0, 1, 2, 3, 4, 3, 2, 1]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.6, 1.5, 2.4, 3),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [-0.7853981633974483, -0.8726646259971648, -0.6981317007977318, -0.9599310885968813, -0.7853981633974483]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-130, 50)]
-}
-
 [sub_resource type="Animation" id="Animation_2kjl0"]
 resource_name = "player_walk_left"
 length = 3.0
@@ -378,6 +253,132 @@ tracks/2/keys = {
 "values": [Vector2(150, 150)]
 }
 
+[sub_resource type="Animation" id="Animation_hekqa"]
+resource_name = "player_walk_up"
+length = 3.0
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame_coords:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 0.9943542, 1.1960777, 1.4018763, 1.5989693, 1.7989694, 1.9989693, 2.1989694, 2.3989694, 2.5933235, 2.795047, 3.0008457),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 3, 2, 1, 0, 1, 2, 3, 4, 3, 2, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.9, 1.9, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.08726646259971647, -0.08726646259971647, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1fjw4"]
+resource_name = "player_walk_up_left"
+length = 3.0
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame_coords:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 0.9943542, 1.1960777, 1.4018763, 1.5989693, 1.7989694, 1.9989693, 2.1989694, 2.3989694, 2.5933235, 2.795047, 3.0008457),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 3, 2, 1, 0, 1, 2, 3, 4, 3, 2, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.5, 2.4, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.7853981633974483, -0.8726646259971648, -0.6981317007977318, -0.9599310885968813, -0.7853981633974483]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-130, 50)]
+}
+
+[sub_resource type="Animation" id="Animation_n28gq"]
+resource_name = "player_walk_up_right"
+length = 3.0
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame_coords:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 0.9943542, 1.1960777, 1.4018763, 1.5989693, 1.7989694, 1.9989693, 2.1989694, 2.3989694, 2.5933235, 2.795047, 3.0008457),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 3, 2, 1, 0, 1, 2, 3, 4, 3, 2, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.5, 2.4, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.7853981633974483, 0.6981317007977318, 0.8726646259971648, 0.6108652381980153, 0.7853981633974483]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(130, 50)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rv7k3"]
 _data = {
 &"RESET": SubResource("Animation_rll4u"),
@@ -432,7 +433,6 @@ blend_point_6/node = SubResource("AnimationNodeAnimation_18njm")
 blend_point_6/pos = Vector2(-1, 0)
 blend_point_7/node = SubResource("AnimationNodeAnimation_veq1f")
 blend_point_7/pos = Vector2(-0.6, 0.6)
-blend_mode = 1
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3ako4"]
 animation = &"player_walk_down"
@@ -475,7 +475,6 @@ blend_point_6/node = SubResource("AnimationNodeAnimation_pp8h6")
 blend_point_6/pos = Vector2(-1, 0)
 blend_point_7/node = SubResource("AnimationNodeAnimation_2kjl0")
 blend_point_7/pos = Vector2(-0.6, 0.6)
-blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_gcflu"]
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_3ako4")
@@ -494,6 +493,10 @@ animation_tree = NodePath("AnimationTree")
 texture = ExtResource("2_3ako4")
 hframes = 5
 
+[node name="Node2D" parent="Sprite2D" instance=ExtResource("3_rll4u")]
+z_index = -1
+position = Vector2(44, 526)
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Sprite2D")
 libraries = {
@@ -504,7 +507,7 @@ libraries = {
 root_node = NodePath("../Sprite2D")
 tree_root = SubResource("AnimationNodeStateMachine_gcflu")
 anim_player = NodePath("../AnimationPlayer")
-parameters/Idle/blend_position = Vector2(0, 0)
+parameters/Idle/blend_position = Vector2(-0.52437985, 0.5)
 parameters/Walk/blend_position = Vector2(-0.00085544586, -0.01098907)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -514,5 +517,5 @@ shape = SubResource("CircleShape2D_3ako4")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-1, 128)
-zoom = Vector2(-0.065, -0.065)
+zoom = Vector2(-0.41, -0.41)
 position_smoothing_enabled = true

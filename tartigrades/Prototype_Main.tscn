@@ -12,7 +12,8 @@ metadata/__load_path__ = "res://collectibles/collectible.tscn"
 script = ExtResource("1_6m7hl")
 
 [node name="Player" parent="." instance=ExtResource("1_yb3aq")]
-position = Vector2(1043, 1143)
+position = Vector2(1042.135, 1143)
+scale = Vector2(0.105, 0.105)
 
 [node name="Background" parent="." instance=ExtResource("2_rgw62")]
 z_index = -5
