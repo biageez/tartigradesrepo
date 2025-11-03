@@ -489,6 +489,7 @@ script = ExtResource("1_3ako4")
 animation_tree = NodePath("AnimationTree")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.7137255)
 texture = ExtResource("2_3ako4")
 hframes = 5
 

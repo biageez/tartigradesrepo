@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://ct0oh2t45rr04"]
+[gd_scene load_steps=5 format=3 uid="uid://ct0oh2t45rr04"]
 
 [ext_resource type="Texture2D" uid="uid://cnjfqc70gwsrs" path="res://player/Player_Belly.png" id="1_0l1s6"]
-[ext_resource type="Script" uid="uid://d4mfvlfppgexg" path="res://player/prototype_belly_follower.gd" id="1_fohbs"]
 
 [sub_resource type="Animation" id="Animation_fohbs"]
 resource_name = "Belly_Walk"
@@ -43,10 +42,9 @@ _data = {
 }
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_fohbs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.90588236)
+modulate = Color(1, 1, 1, 0.8392157)
 position = Vector2(0, 200)
 scale = Vector2(-1, 1)
 texture = ExtResource("1_0l1s6")
