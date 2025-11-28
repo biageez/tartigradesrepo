@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://d4kxbxj57my1j" path="res://save_loader/Prototype_Save_Loader.gd" id="1_6m7hl"]
 [ext_resource type="PackedScene" uid="uid://bh0i7wb1r0n1j" path="res://player/Prototype_Player.tscn" id="1_yb3aq"]
 [ext_resource type="PackedScene" uid="uid://h6n4e6iuotm1" path="res://environment/background.tscn" id="2_rgw62"]
-[ext_resource type="Script" path="res://spawner.gd" id="4_nx6b5"]
+[ext_resource type="Script" uid="uid://dcygtub7imikp" path="res://spawner.gd" id="4_nx6b5"]
 
 [sub_resource type="Resource" id="Resource_nx6b5"]
 metadata/__load_path__ = "res://collectibles/collectible.tscn"

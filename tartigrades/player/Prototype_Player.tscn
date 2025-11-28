@@ -432,6 +432,7 @@ blend_point_6/node = SubResource("AnimationNodeAnimation_18njm")
 blend_point_6/pos = Vector2(-1, 0)
 blend_point_7/node = SubResource("AnimationNodeAnimation_veq1f")
 blend_point_7/pos = Vector2(-0.6, 0.6)
+blend_mode = 1
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3ako4"]
 animation = &"player_walk_down"
@@ -474,12 +475,13 @@ blend_point_6/node = SubResource("AnimationNodeAnimation_pp8h6")
 blend_point_6/pos = Vector2(-1, 0)
 blend_point_7/node = SubResource("AnimationNodeAnimation_2kjl0")
 blend_point_7/pos = Vector2(-0.6, 0.6)
+blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_gcflu"]
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_3ako4")
 states/Idle/position = Vector2(344, 100)
 states/Walk/node = SubResource("AnimationNodeBlendSpace2D_vatk6")
-states/Walk/position = Vector2(506, 100)
+states/Walk/position = Vector2(505.5, 100)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3ako4"]
 radius = 2.697334
@@ -503,8 +505,8 @@ libraries = {
 root_node = NodePath("../Sprite2D")
 tree_root = SubResource("AnimationNodeStateMachine_gcflu")
 anim_player = NodePath("../AnimationPlayer")
-parameters/Idle/blend_position = Vector2(-0.52437985, 0.5)
-parameters/Walk/blend_position = Vector2(-0.00085544586, -0.01098907)
+parameters/Idle/blend_position = Vector2(-0.68333334, 0.74107146)
+parameters/Walk/blend_position = Vector2(0, 0.96428573)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 167)
@@ -513,5 +515,5 @@ shape = SubResource("CircleShape2D_3ako4")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-1, 128)
-zoom = Vector2(-0.41, -0.41)
+zoom = Vector2(-1.17, -1.17)
 position_smoothing_enabled = true
